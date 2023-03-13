@@ -15,6 +15,7 @@ function App() {
         <Route path="second" element={<Second />} />
         <Route path="third" element={<Third />} />
         <Route path="fourth" element={<Fourth />} />
+        {/* modal 테스트를 위해 route 추가 , 추후 삭제 예정*/}
         <Route path="modaltest" element={<Modals/>}/>
       </Routes>
     </div>
