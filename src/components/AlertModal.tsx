@@ -1,16 +1,16 @@
 import React from "react";
-import { Background, ModalInner } from "./Modals";
 type AlertModalProps ={
   content: string|null,
   closeModal :()=>void
 };
 const AlertModal=({content ,closeModal}:AlertModalProps)=>{
   return ( 
-    <Background 
+    <div 
       id="alert-modal"
+      className ="background"
     >
-      <ModalInner
-        className="inner"
+      <div
+        className="modal-inner"
       >
         <button
           onClick={closeModal}
@@ -20,8 +20,8 @@ const AlertModal=({content ,closeModal}:AlertModalProps)=>{
         <div className="content">
           {content}
         </div>
-      </ModalInner>
-    </Background>
+      </div>
+    </div>
   )
 };
 export default React.memo(AlertModal)

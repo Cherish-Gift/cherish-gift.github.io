@@ -1,7 +1,6 @@
 import React, { ReactNode, useState } from "react";
 import AlertModal from "./AlertModal";
 import ModalPortal from "./ModalPortal";
-import styled from "styled-components";
 import '../assets/modal.scss';
 
 const fsModal ="fs";
@@ -37,26 +36,6 @@ export const initialModal :modalStateType ={
   yesBtn:null,
   noBtn:null
 };
-export const Background = styled.div`
-  position:relative;
-  z-index:999;
-  height:100vh;
-  width:100vw;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  background-color:#06060676; 
-`
-export const ModalInner = styled.div`
-  position:relative;
-  background-color:#ffff;
-  width: 70vw;
-  min-height: 80px;
-  border-radius:15px;
-  padding:12px;
-  box-sizing:border-box;
-`
 const Modals=()=>{
   const alertModal :modalStateType = {
     type:"alert",
@@ -77,11 +56,15 @@ const Modals=()=>{
                 />;
   return(
     <div id="modals">
-      <button 
-        onClick={()=>setModal(alertModal)}
-      >
-        open alert modal
-      </button>
+      {modal.type == undefined &&
+      <>
+        <button 
+          onClick={()=>setModal(alertModal)}
+        >
+          open alert modal
+        </button>
+      </> 
+      }
     {modal.type !== undefined &&
       <ModalPortal
         child ={child}
