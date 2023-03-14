@@ -1,14 +1,14 @@
-import React, { useRef, useState, useEffect } from "react";
-import "./FontAwesome";
-import "../BottomNav.css";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import throttle from "lodash/throttle";
+import React, { useRef, useState, useEffect } from 'react';
+import './FontAwesome';
+import '../BottomNav.css';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import throttle from 'lodash/throttle';
 
 const BottomNav = () => {
   // 현재 선택된 아이콘을 관리하는 state
   const [activeNav, setActiveNav] = React.useState(0);
-  
+
   // 각 페이지별 상태를 나타내는 변수
   const HomeTag = 1;
   const CurationTag = 2;
@@ -31,14 +31,13 @@ const BottomNav = () => {
 
   const throttleScroll = throttle(handleScroll, 50);
   useEffect(() => {
-    documentRef.current.addEventListener("scroll", throttleScroll);
-    return () =>
-      documentRef.current.removeEventListener("scroll", throttleScroll);
+    documentRef.current.addEventListener('scroll', throttleScroll);
+    return () => documentRef.current.removeEventListener('scroll', throttleScroll);
   }, [pageY]);
 
   return (
     /* 하단 네비게이션 최상위 태그 */
-    <nav className={hide ? "wrapper-hidden" : "wrapper"}>
+    <nav className={hide ? 'wrapper-hidden' : 'wrapper'}>
       {/* 네비게이션을 구성하고 있는 하나의 버튼 */}
       <Link
         to="/first"
@@ -50,11 +49,9 @@ const BottomNav = () => {
         <div>
           <FontAwesomeIcon
             icon="home"
-            className={activeNav === 1 ? "nav-item active" : "nav-item"}
+            className={activeNav === 1 ? 'nav-item active' : 'nav-item'}
           />
-          <div className={activeNav === 1 ? "nav-title active" : "nav-title"}>
-            홈
-          </div>
+          <div className={activeNav === 1 ? 'nav-title active' : 'nav-title'}>홈</div>
         </div>
       </Link>
       <Link
@@ -67,11 +64,9 @@ const BottomNav = () => {
         <div>
           <FontAwesomeIcon
             icon="compass"
-            className={activeNav === 2 ? "nav-item active" : "nav-item"}
+            className={activeNav === 2 ? 'nav-item active' : 'nav-item'}
           />
-          <div className={activeNav === 2 ? "nav-title active" : "nav-title"}>
-            큐레이션
-          </div>
+          <div className={activeNav === 2 ? 'nav-title active' : 'nav-title'}>큐레이션</div>
         </div>
       </Link>
       <Link
@@ -84,11 +79,9 @@ const BottomNav = () => {
         <div>
           <FontAwesomeIcon
             icon="plus"
-            className={activeNav === 3 ? "nav-item active" : "nav-item"}
+            className={activeNav === 3 ? 'nav-item active' : 'nav-item'}
           />
-          <div className={activeNav === 3 ? "nav-title active" : "nav-title"}>
-            카테고리
-          </div>
+          <div className={activeNav === 3 ? 'nav-title active' : 'nav-title'}>카테고리</div>
         </div>
       </Link>
       <Link
@@ -101,11 +94,9 @@ const BottomNav = () => {
         <div>
           <FontAwesomeIcon
             icon="medal"
-            className={activeNav === 4 ? "nav-item active" : "nav-item"}
+            className={activeNav === 4 ? 'nav-item active' : 'nav-item'}
           />
-          <div className={activeNav === 4 ? "nav-title active" : "nav-title"}>
-            저장목록
-          </div>
+          <div className={activeNav === 4 ? 'nav-title active' : 'nav-title'}>저장목록</div>
         </div>
       </Link>
     </nav>
