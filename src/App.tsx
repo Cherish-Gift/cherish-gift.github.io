@@ -4,7 +4,7 @@ import Second from "./pages/Second";
 import Third from "./pages/Third";
 import Fourth from "./pages/Fourth";
 import Main from "./pages/Main";
-import Modals from "./components/modal/Modals";
+import Modals from "./components/modals/Modals";
 
 function App() {
   return (
