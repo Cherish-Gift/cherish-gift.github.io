@@ -4,7 +4,7 @@ import axios from "axios";
 //ButtonProps는 ButtonHTMLAttributes<HTMLButtonElement> 상속받았기 때문에 
 // button 태그에 대한 모든 속성을 props 사용 가능. 이외의 속성은 따로 선언.
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode;
   onClickAction?: () => void; // 버튼 클릭 시 실행될 함수
   to?: string; // 버튼 클릭 시 이동할 페이지 주소
@@ -25,7 +25,7 @@ const Button = ({
   onError,
   style,
   ...rest
-}) => {
+}:Props) => {
 
   const handleClick = () => {
     if (onClickAction) {
