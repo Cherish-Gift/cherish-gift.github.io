@@ -1,66 +1,64 @@
 /* 네비바 하단 고정 밑 세로 길이 설정 */
 .wrapper {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    width: auto;
-    border-radius: 10px 10px 0px 0px;
-    background-color: white;
-    transition: opacity 1s ease-in-out;
-    opacity: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  width: auto;
+  border-radius: 10px 10px 0px 0px;
+  background-color: white;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
 }
 .wrapper-hidden {
-    visibility: hidden;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    width: auto;
-    border-radius: 10px 10px 0px 0px;
-    background-color: white;
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  width: auto;
+  border-radius: 10px 10px 0px 0px;
+  background-color: white;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
 }
 
 /* nav태그 아래의 자식들을 수평정렬하기 위한 설정 */
 nav {
-    overflow: hidden;
-    border-top: 2px solid grey;
-
+  overflow: hidden;
+  border-top: 2px solid grey;
 }
 
 /* nav태그 아래의 div태그들을 수평정렬 및 세로길이 설정 */
 .nav-link {
-    /* 수평정렬, 4개의 button을 각각 25% width만큼 할당 */
-    float: left;
-    width: 25%;
-    text-align: center;
-    /* 세로길이 설정 */
-    height: 45px;
-    line-height: 50px;
-    cursor: pointer;
-    text-decoration: none;
+  /* 수평정렬, 4개의 button을 각각 25% width만큼 할당 */
+  float: left;
+  width: 25%;
+  text-align: center;
+  /* 세로길이 설정 */
+  height: 45px;
+  line-height: 50px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .nav-title {
-    position: relative;
-    bottom: 25px;
-    font-size:13px;
-    font-weight:bold;
-    font-family: "Courier-new";
-    color:black;
-
+  position: relative;
+  bottom: 25px;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: 'Courier-new';
+  color: black;
 }
 
 /* 하단 네비바의 메뉴를 눌렀을 때 색상 변경*/
 .nav-item {
-    color: grey;
+  color: grey;
 }
 
 /* 하단 네비바의 메뉴를 눌렀을 때 색상 변경*/
 .active {
-    color: #ef5c89;
+  color: #ef5c89;
 }
