@@ -9,7 +9,7 @@ const BottomNav = () => {
   // 현재 선택된 아이콘을 관리하는 state
   const [activeNav, setActiveNav] = React.useState(0);
   
-  // 각 페이지별 상태를 나타내는 변수
+  // 각 페이지별 상태를  나타내는 변수
   const HomeTag = 1;
   const CurationTag = 2;
   const CategoryTag = 3;
